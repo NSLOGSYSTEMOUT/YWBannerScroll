@@ -9,11 +9,14 @@
 #import "ViewController.h"
 #import "BannerRollingView.h"
 
+#import "BannerRollingViewPlus.h"
+
 @interface ViewController ()<BannerRollingDelegate, BannerRollingDataSource>{
     
     // 轮播图变量，其实作为局部变量也行
-    BannerRollingView *carouseView;
+    BannerRollingView       *bannerView;
     
+    BannerRollingViewPlus   *bannerViewPlus;
     
     // 轮播图相关的数据
     NSArray *kvDataArray;
@@ -33,11 +36,23 @@
     label1.text = @"两边加多余页方式";
     [self.view addSubview:label1];
     
-    carouseView = [[BannerRollingView alloc] init];
-    carouseView.frame = CGRectMake(0, 50, self.view.frame.size.width, 200);
-    carouseView.dateSource = self;
-    carouseView.delegate = self;
-    [self.view addSubview:carouseView];
+    bannerView = [[BannerRollingView alloc] init];
+    bannerView.frame = CGRectMake(0, 50, self.view.frame.size.width, 200);
+    bannerView.dateSource = self;
+    bannerView.delegate = self;
+    [self.view addSubview:bannerView];
+    
+    
+    
+    // 添加轮播图2
+    UILabel *label2 = [[UILabel alloc] initWithFrame:CGRectMake(0, 270, 150, 30)];
+    label2.text = @"三张页面循环方式";
+    [self.view addSubview:label2];
+    
+    bannerViewPlus = [[BannerRollingViewPlus alloc] initWithFrame:CGRectMake(0, 300, self.view.frame.size.width, 200)];
+    [self setBannerViewPlus];
+    [self.view addSubview:bannerViewPlus];
+
     
 }
 
@@ -71,6 +86,25 @@
     
     NSLog(@"%@",kvDataArray[index]);
     
+}
+
+
+#pragma mark - 轮播图2设置 
+- (void)setBannerViewPlus
+{
+    // 图片数组，可以是其他的资源，设置到轮播图上就可以
+    NSMutableArray *imagerray = [NSMutableArray array];
+    for (int i = 0; i < kvDataArray.count; i++)
+    {
+        // 先用空白页测试
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%d.jpg", i + 1]];
+        [imagerray addObject:image];
+    }
+    
+    
+    [bannerViewPlus setupSubViewPages:imagerray withCallBackBlock:^(NSInteger index) {
+        NSLog(@"clicked %ld", (long)index);
+    }];
 }
 
 

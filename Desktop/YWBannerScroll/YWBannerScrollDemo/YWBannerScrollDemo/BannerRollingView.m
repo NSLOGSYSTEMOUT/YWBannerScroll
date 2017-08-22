@@ -73,12 +73,15 @@ static const double kTimerInterval = 2.0;
         {
             // 添加control,设置偏移位置
             UIControl *control = [[UIControl alloc] initWithFrame:CGRectMake(self.frame.size.width * i, 0, self.frame.size.width, self.frame.size.height)];
-            
+
+
             UIView *pageView = nil;
             if (i == 0)
             {
                 // 第一页多余页跟最后一页一样并重新定义
                 pageView = [self.dateSource bannerRollingView:self cellAtIndex:_pageCount - 1];
+    
+                
             }
             else if (i == _pageCount + 1)
             {
@@ -97,6 +100,7 @@ static const double kTimerInterval = 2.0;
             
             // 为每个页面添加响应层
             [control addTarget:self action:@selector(pageCliked) forControlEvents:UIControlEventTouchUpInside];
+            
             
             [_scrollView addSubview:control];
             
@@ -131,6 +135,8 @@ static const double kTimerInterval = 2.0;
     return _pageControl;
 }
 
+
+
 #pragma mark - pagecontrol事件
 // 这个是点击小圆点条进行切换，到边不能循环
 - (void)pageControlTouched
@@ -145,6 +151,7 @@ static const double kTimerInterval = 2.0;
     
     // 重新开启定时器
     [self.kvTimer setFireDate:[NSDate dateWithTimeInterval:kTimerInterval sinceDate:[NSDate date]]];
+    
 }
 
 #pragma mark - 滚动事件
@@ -163,6 +170,7 @@ static const double kTimerInterval = 2.0;
     // 左右边界
     CGFloat leftEdgeOffsetX = 0;
     CGFloat rightEdgeOffsetX = self.frame.size.width * (_pageCount + 1);
+    
     
     if (scrollView.contentOffset.x < preOffsetX)
     {

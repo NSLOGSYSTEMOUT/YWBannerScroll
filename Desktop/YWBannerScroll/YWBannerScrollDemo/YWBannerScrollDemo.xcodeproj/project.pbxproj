@@ -15,6 +15,7 @@
 		32BC1EDC1F4BD3AD009BCE78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32BC1EDA1F4BD3AD009BCE78 /* LaunchScreen.storyboard */; };
 		32BC1EE71F4BD3AD009BCE78 /* YWBannerScrollDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BC1EE61F4BD3AD009BCE78 /* YWBannerScrollDemoUITests.m */; };
 		32BC1EF31F4BD65F009BCE78 /* BannerRollingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BC1EF21F4BD65F009BCE78 /* BannerRollingView.m */; };
+		32BC1EF61F4C1DCA009BCE78 /* BannerRollingViewPlus.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BC1EF51F4C1DCA009BCE78 /* BannerRollingViewPlus.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		32BC1EE81F4BD3AD009BCE78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32BC1EF11F4BD65F009BCE78 /* BannerRollingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerRollingView.h; sourceTree = "<group>"; };
 		32BC1EF21F4BD65F009BCE78 /* BannerRollingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerRollingView.m; sourceTree = "<group>"; };
+		32BC1EF41F4C1DCA009BCE78 /* BannerRollingViewPlus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerRollingViewPlus.h; sourceTree = "<group>"; };
+		32BC1EF51F4C1DCA009BCE78 /* BannerRollingViewPlus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerRollingViewPlus.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,8 @@
 				32BC1ED31F4BD3AD009BCE78 /* ViewController.m */,
 				32BC1EF11F4BD65F009BCE78 /* BannerRollingView.h */,
 				32BC1EF21F4BD65F009BCE78 /* BannerRollingView.m */,
+				32BC1EF41F4C1DCA009BCE78 /* BannerRollingViewPlus.h */,
+				32BC1EF51F4C1DCA009BCE78 /* BannerRollingViewPlus.m */,
 				32BC1ED51F4BD3AD009BCE78 /* Main.storyboard */,
 				32BC1ED81F4BD3AD009BCE78 /* Assets.xcassets */,
 				32BC1EDA1F4BD3AD009BCE78 /* LaunchScreen.storyboard */,
@@ -224,6 +229,7 @@
 				32BC1ED11F4BD3AD009BCE78 /* AppDelegate.m in Sources */,
 				32BC1EF31F4BD65F009BCE78 /* BannerRollingView.m in Sources */,
 				32BC1ECE1F4BD3AD009BCE78 /* main.m in Sources */,
+				32BC1EF61F4C1DCA009BCE78 /* BannerRollingViewPlus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
