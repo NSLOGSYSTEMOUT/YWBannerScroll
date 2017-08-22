@@ -32,7 +32,6 @@
 @required
 
 @optional
-
 //选中轮播图的index
 -(void)bannerRollingView:(BannerRollingView *)bannerRollingView didSelectedAtIndex:(NSInteger)index;
 

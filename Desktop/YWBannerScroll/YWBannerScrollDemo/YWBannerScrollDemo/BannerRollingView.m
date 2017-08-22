@@ -65,6 +65,7 @@ static const double kTimerInterval = 2.0;
         
         // 设置滚动范围
         _scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.frame) * (_pageCount + 2), CGRectGetHeight(self.frame));
+        
         _scrollView.delegate = self;
         
         // 添加分页，左右增加一页
@@ -100,6 +101,7 @@ static const double kTimerInterval = 2.0;
             [_scrollView addSubview:control];
             
         }
+        
     }
     return _scrollView;
 }
@@ -274,7 +276,7 @@ static const double kTimerInterval = 2.0;
 - (void)pageCliked
 {
     // 当点击轮播图的时候
-    if ([self.delegate respondsToSelector:@selector(carouseView:didSelectedAtIndex:)])
+    if ([self.delegate respondsToSelector:@selector(bannerRollingView:didSelectedAtIndex:)])
     {
         
         [self.delegate bannerRollingView:self didSelectedAtIndex:_pageControl.currentPage];

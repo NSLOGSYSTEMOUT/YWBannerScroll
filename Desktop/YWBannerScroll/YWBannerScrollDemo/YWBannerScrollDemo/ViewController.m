@@ -69,12 +69,7 @@
 
 -(void)bannerRollingView:(BannerRollingView *)bannerRollingView didSelectedAtIndex:(NSInteger)index{
     
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"carouse1 msg"
-                                                        message:kvDataArray[index]
-                                                       delegate:nil
-                                              cancelButtonTitle:@"ok"
-                                              otherButtonTitles:nil, nil];
-    [alertView show];
+    NSLog(@"%@",kvDataArray[index]);
     
 }
 
